@@ -22,3 +22,8 @@ Este proyecto es un conversor de monedas que permite a los usuarios convertir en
 
 ## Contribuciones
 Las contribuciones son bienvenidas.
+
+## Autor
+<p>&copy José Luis Pineda 
+            <a href="https://www.linkedin.com/in/jlpineda"><img class="linkeind" src="imagenes/logo-linkedIn.png" alt="Logo linkedin"></a>
+            <a href="https://github.com/JLuisPE"><img class="github" src="imagenes/logo-github.png" alt="Logo github"></a> </p>
