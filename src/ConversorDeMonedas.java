@@ -20,7 +20,7 @@ public class ConversorDeMonedas {
         String jsonRespuesta = obtenerTasasDeCambio();
         //Obtenemos el mapa de tasas de cambió especificos y los válidamos
         Map tasas = gson.fromJson(jsonRespuesta, Map.class);
-        Map<String, Double> tasasDeCambio = (Map<String, Double>) tasas.get("rates");
+        Map<String, Double> tasasDeCambio = (Map<String, Double>) tasas.get("conversion_rates");
         if (tasasDeCambio == null || tasasDeCambio.isEmpty()) {
             throw new Exception("No se pudo obtener tasas de cambio válidas desde la API");
         }
