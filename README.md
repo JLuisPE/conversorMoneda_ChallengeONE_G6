@@ -4,7 +4,7 @@
 Este proyecto es un conversor de monedas que permite a los usuarios convertir entre diferentes divisas utilizando las tasas de cambio actuales proporcionadas por una API externa.
 
 ## Características Principales
-- Conversión entre varias monedas, incluyendo Dólar, Lempira Hondureño, Real Brasileño, Peso Colombiano y Peso Dominicano.
+- Conversión entre varias monedas, incluyendo Dólar, Lempira Hondureño, Colón Costarricense, Quetzal Guatemalteco y Córdoba Nicaragüense.
 - Utiliza la API de ExchangeRate-API para obtener las tasas de cambio más recientes.
 - Implementa el formato de moneda adecuado para cada país utilizando locales.
 
