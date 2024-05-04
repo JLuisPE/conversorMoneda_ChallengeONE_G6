@@ -28,6 +28,7 @@ public class ConversorDeMonedas {
         // Realizar la conversión de acuerdo a la opción seleccionada
         double resultado = 0.0;
         Locale locale = Locale.US;
+
         switch (opcion) {
             case 1:
                 resultado = cantidad * tasasDeCambio.getOrDefault("HNL", 0.00);
@@ -37,25 +38,25 @@ public class ConversorDeMonedas {
                 resultado = cantidad / tasasDeCambio.getOrDefault("HNL", 0.0);
                 break;
             case 3:
-                resultado = cantidad * tasasDeCambio.getOrDefault("BRL", 0.0);
-                locale = new Locale("pt", "BR");
+                resultado = cantidad * tasasDeCambio.getOrDefault("CRC", 0.0);
+                locale = new Locale("es", "CRC");
                 break;
             case 4:
-                resultado = cantidad / tasasDeCambio.getOrDefault("BRL", 0.0);
+                resultado = cantidad / tasasDeCambio.getOrDefault("CRC", 0.0);
                 break;
             case 5:
-                resultado = cantidad * tasasDeCambio.getOrDefault("COP", 0.0);
-                locale = new Locale("es", "CO");
+                resultado = cantidad * tasasDeCambio.getOrDefault("GTQ", 0.0);
+                locale = new Locale("es", "GT");
                 break;
             case 6:
-                resultado = cantidad / tasasDeCambio.getOrDefault("COP", 0.0);
+                resultado = cantidad / tasasDeCambio.getOrDefault("GTQ", 0.0);
                 break;
             case 7:
-                resultado = cantidad * tasasDeCambio.getOrDefault("DOP", 0.0);
-                locale = new Locale("es", "DO");
+                resultado = cantidad * tasasDeCambio.getOrDefault("NIO", 0.0);
+                locale = new Locale("es", "NI");
                 break;
             case 8:
-                resultado = cantidad / tasasDeCambio.getOrDefault("DOP", 0.0);
+                resultado = cantidad / tasasDeCambio.getOrDefault("NIO", 0.0);
                 break;
             default:
                 // Opción de conversión no válida
@@ -87,4 +88,53 @@ public class ConversorDeMonedas {
         // Devilver el cuerpo de la respuesta JSON de tasas de cambio
         return respuesta.body();
     }
+
+    public static String obtenerNombreMoneda(int opcion) {
+        switch (opcion) {
+            case 1:
+                return "Dólares";
+            case 2:
+                return "Lempiras";
+            case 3:
+                return "Dólares";
+            case 4:
+                return "Colones";
+            case 5:
+                return "Dólares";
+            case 6:
+                return "Quetzales";
+            case 7:
+                return "Dólares";
+            case 8:
+                return "Córdobas";
+
+            default:
+                throw new IllegalArgumentException("Opción de conversión no válida");
+        }
+    }
+
+    public static int opuestoOpcion(int opcion) {
+        switch (opcion) {
+            case 1:
+                return 2;
+            case 2:
+                return 1;
+            case 3:
+                return 4;
+            case 4:
+                return 3;
+            case 5:
+                return 6;
+            case 6:
+                return 5;
+            case 7:
+                return 8;
+            case 8:
+                return 7;
+            default:
+                throw new IllegalArgumentException("Opción de conversión no válida");
+        }
+    }
+
+
 }
