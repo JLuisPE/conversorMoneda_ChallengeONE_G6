@@ -47,8 +47,6 @@ public class Principal {
 
             try {
                 String result = converter.convertirMoneda(option, amount);
-                //System.out.println("Resultado equivale a: " + result + scanner.locale());
-                //System.out.println("Resultado equivale a: " + result);
                 System.out.println((int) amount + " " + ConversorDeMonedas.obtenerNombreMoneda(option) + " equivalen a " + result + " " + ConversorDeMonedas.obtenerNombreMoneda(ConversorDeMonedas.opuestoOpcion(option)));
 
             } catch (Exception e) {
